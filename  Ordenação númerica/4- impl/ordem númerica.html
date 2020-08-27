@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang=" en">
+    <head>
+        <meta charset=" UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/> >
+        <title>Ordenar 3 números</title>
+        
+        <script>
+            //PRDB: Ordenar 2 numeros
+            
+            //HTML
+            //0) Tela
+            // três entradas e 1 botão
+
+            //JS
+            function ordenar() {
+                // 1: ENTRADA: ler os números da tela
+
+                 var n1 = document.getElementById("n1").value;
+                 var n2 = document.getElementById("n2").value;
+                 var n3 = document.getElementById("n3").value;
+
+                  //2: PROCESSAMENTO: ordenar
+                  var saida = "";
+                  if (n1 != n2 && n2 != n3 && n1 != n3) {
+                      if (n1 < n2 && n2 < n3) {
+                          saida = `${n1} ${n2} ${n3} `; //template string  
+                      } else if (n1 > n2 && n2 > n3) {
+                          saida = `${n3} ${n2} ${n1} `;
+                      } else if (n2 > n1 && n1 > n3) {
+                          saida = `${n3} ${n1} ${n2} `;
+                      } else {
+                          saida = `${n1} ${n3} ${n2} `;
+                      } 
+                      } else {
+                          saida = "Os números devem ser diferentes";
+                      }
+
+
+                      //3 SAÍDA: imprimir 
+                      document.getElementById("resultado"). innerText = saida;
+                  }       
+                            
+
+        </script>
+        <head>
+            <body>
+                <input id="n1" placeholder="Número 1" type="number" />
+                <input id="n2" placeholder="Número 2" type="number" />
+                <input id="n3" placeholder="Número 3" type="number" />
+                <label id="resultado"></label>
+                <button onclick="ordenar()">Ordenar</button> 
+            </body>
+        <html>
+
+
+            
+    
+            
+            
+    
+
+
+
+        
+
